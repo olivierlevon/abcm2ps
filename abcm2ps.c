@@ -22,8 +22,12 @@
 #include "abcm2ps.h"
 
 #ifdef HAVE_MMAP
+#ifndef WIN32
 #include <unistd.h>
 #include <sys/mman.h>
+#else
+#include "mmap-windows.h"
+#endif
 #elif defined(linux)
 #include <unistd.h>
 #endif

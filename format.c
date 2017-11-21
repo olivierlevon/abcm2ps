@@ -939,7 +939,7 @@ static const struct vpar vpar_tb[] = {
 #ifndef WIN32
 	{}
 #else
-	{NULL, NULL, 0}
+	{NULL, NULL}
 #endif
 };
 /* -- set a voice parameter -- */

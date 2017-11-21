@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include=".\abcparse.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\buffer.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\deco.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\draw.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\format.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\front.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\glyph.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\music.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\parse.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\subs.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\svg.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\syms.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="mmap-windows.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="abcm2ps.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="regex.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include=".\config.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="mmap-windows.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="abcm2ps.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="regex.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source files">
+      <UniqueIdentifier>{5420e695-0e0c-47e0-8f3c-e2fb15d8989a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{fc408689-f3b4-4fb0-a53e-a54f8c10de2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource files">
+      <UniqueIdentifier>{e19f42f0-41d9-474b-836b-333f1cd1d10a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="abcm2ps.ico">
+      <Filter>Resource files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="abcm2ps.rc">
+      <Filter>Resource files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="abcm2ps.manifest">
+      <Filter>Resource files</Filter>
+    </Manifest>
+  </ItemGroup>
+</Project>
