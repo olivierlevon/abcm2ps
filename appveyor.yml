@@ -1,0 +1,7 @@
+version: 8.13.17b{build}
+image: Visual Studio 2015
+configuration: Release
+platform: x86
+build:
+  project: abcm2ps.vcxproj
+  verbosity: minimal

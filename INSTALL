@@ -72,7 +72,7 @@ Copy the file 'config.h' in 'config.h' (you may use config.bat for that)
 and edit the file according to your preferences, compile all
 the '.c' files using an ANSI C compiler, and link them together.
 A solution file abcm2ps.sln is provided if you would like to build
-with Microfot Visual Studio 2015 or 2017 Community 
+with Microsoft Visual Studio 2015 or 2017 Community 
 (you may use build_vc14.bat to build from command line).
 The resulting binary file should run immediately from where it has been
 generated. You may then move it at any place you want.

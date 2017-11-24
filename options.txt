@@ -102,7 +102,7 @@ List of the options
 	See: [1] - indent <unit>
 
   -i, +i
-	Insert a red cercle around the errors in the PostScript output.
+	Insert a red circle around the errors in the PostScript output.
 
   -j <int>[b], +j
 	See: [1] - measurenb <int>
