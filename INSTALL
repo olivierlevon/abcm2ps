@@ -56,16 +56,26 @@ by default in the Makefile and you should use script 'configure'
 to include it in the Makefile.
 
 
-Windows or MAC systems
-======================
+MAC systems
+===========
 
 Change the file 'config.h' according to your preferences, compile all
 the '.c' files using an ANSI C compiler, and link them together.
 The resulting binary file should run immediately from where it has been
 generated. You may then move it at any place you want.
 
-Note: I don't know how to do file mapping (mmap) in ms-windows, so,
-you must comment 'HAVE_MMAP' in config.h.
+
+Windows
+=======
+
+Copy the file 'config.h' in 'config.h' (you may use config.bat for that) 
+and edit the file according to your preferences, compile all
+the '.c' files using an ANSI C compiler, and link them together.
+A solution file abcm2ps.sln is provided if you would like to build
+with Microfot Visual Studio 2015 or 2017 Community 
+(you may use build_vc14.bat to build from command line).
+The resulting binary file should run immediately from where it has been
+generated. You may then move it at any place you want.
 
 
 Testing
