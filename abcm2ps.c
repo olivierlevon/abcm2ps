@@ -14,6 +14,12 @@
  */
 
 #include <stdlib.h>
+#ifdef WIN32
+#define WIN32_LEAN_AND_MEAN
+#include <Windows.h>
+#include <Shlwapi.h>
+#undef IN
+#endif
 #include <errno.h>
 #include <string.h>
 #include <ctype.h>
@@ -502,10 +508,10 @@ static void usage(void)
 	exit(EXIT_SUCCESS);
 }
 
-#ifdef linux
 /* -- where is the default format directory -- */
 static void wherefmtdir(void)
 {
+#ifdef linux
 	char exe[512], *p;
 	FILE *f;
 	int l;
@@ -530,8 +536,73 @@ static void wherefmtdir(void)
 	/* change the format directory */
 	p[-1] = '\0';
 	styd = strdup(exe);
-}
+#else
+#ifdef WIN32
+	char folder[MAX_PATH];
+	char resource[MAX_PATH];
+	char tmpBuffer[MAX_PATH];
+	static char buff[MAX_PATH];
+	DWORD ret;
+	
+	/* Look at the user profile */
+	ret = GetEnvironmentVariableA("USERPROFILE", buff, MAX_PATH);
+	if (ret != 0) //(ret == 0 || ret > MAX_PATH)
+	{
+		/* Documents */
+		snprintf(tmpBuffer, MAX_PATH, "%s\\Documents\\%s", buff, "abcm2ps");
+		if (PathFileExistsA(tmpBuffer))
+		{
+			/* change the format directory */
+			styd = strdup(tmpBuffer);
+		}
+		else
+		{
+			/* My Documents */
+			snprintf(tmpBuffer, MAX_PATH, "%s\\My Documents\\%s", buff, "abcm2ps");
+			if (PathFileExistsA(tmpBuffer))
+			{
+				/* change the format directory */
+				styd = strdup(tmpBuffer);
+			}
+		}
+	}
+	
+	/* Use the binary directory */
+	if ((!styd) || (strcmp(styd, DEFAULT_FDIR) == 0)) //(strcmp(styd, "") == 0)
+	{
+		/* Gets the executable path (handle 0 for the current process) */
+		char * ext;
+		char * app;
+		
+		GetModuleFileNameA(NULL, folder, MAX_PATH);
+		
+		/* Get folder string */
+		app = strrchr(folder, '\\');
+		if (!(app))
+			return;
+		*app++ = '\0';
+		
+		/* Strip the extension */
+		if ((ext = strstr(app, ".exe")) != NULL)
+			 *ext = '\0';
+		
+		snprintf(resource, MAX_PATH, "%s\\%s", folder, app);
+		
+		/* build the path to the executable in the generic */
+		/* resources folder, check there first */
+		snprintf(tmpBuffer, MAX_PATH, "%s\\%s", resource, "abcm2ps.exe");
+		
+		/*  */
+		if (PathFileExistsA(tmpBuffer))
+		{
+			/* change the format directory */
+			styd = strdup(tmpBuffer);
+		}
+	}
 #endif
+#endif
+}
+
 
 /* -- parse the tablature command ('-T n[v]') -- */
 static struct cmdtblt_s *cmdtblt_parse(char *p)
@@ -695,11 +766,10 @@ int main(int argc, char **argv)
 	set_format();
 	init_deco();
 
-#ifdef linux
 	/* if not set, try to find where is the default format directory */
 	if (styd[0] == '\0')
 		wherefmtdir();
-#endif
+
 #ifdef HAVE_PANGO
 	pg_init();
 #endif
