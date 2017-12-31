@@ -24,8 +24,8 @@ LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 8,13,17,0
- PRODUCTVERSION 8,13,17,0
+ FILEVERSION 8,13,18,0
+ PRODUCTVERSION 8,13,18,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -43,13 +43,13 @@ BEGIN
             VALUE "Comments", "abcm2ps windows native 32 bits build"
             VALUE "CompanyName", "http://moinejf.free.fr/"
             VALUE "FileDescription", "abcm2ps: a program to typeset tunes written in ABC format using PostScript"
-            VALUE "FileVersion", "8.13.17.0"
+            VALUE "FileVersion", "8.13.18.0"
             VALUE "InternalName", "abcm2ps"
             VALUE "LegalCopyright", "Copyright (C) 1998-2017 Jean-François Moine (http://moinejf.free.fr)"
             VALUE "LegalTrademarks", "Adapted from abc2ps-1.2.5: Copyright(C) 1996, 1997  Michael Methfessel(msm@ihp-ffo.de)"
             VALUE "OriginalFilename", "abcm2ps.exe"
             VALUE "ProductName", "abcm2ps"
-            VALUE "ProductVersion", "8.13.17.0"
+            VALUE "ProductVersion", "8.13.18.0"
         END
     END
     BLOCK "VarFileInfo"
