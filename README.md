@@ -17,8 +17,9 @@ in order to ease building on Windows platform :
       * regcomp.c
       * regexec.c
  - mmap support for windows (mmap-windows.c and mmap-windows.h files)
+ - support for standard Windows user folder 
 	  
-Some improvements may come later (automated tests, support for standard Windows user folder, Pango support, installer, ...).
+Some improvements may come later (Pango support, automated tests, installer, ...).
  
 
 Current Windows build status :
@@ -28,7 +29,7 @@ Current Windows build status :
 
 ______________________________________________________________________________________________________________________
 
-[![Build Status](https://travis-ci.org/leesavide/abcm2ps.svg?branch=master)](https://travis-ci.org/leesavide/abcm2ps)
+[![Build Status](https://travis-ci.org/olivierlevon/abcm2ps.svg?branch=master)](https://travis-ci.org/olivierlevon/abcm2ps)
 
 ### Overview
 
