@@ -22,9 +22,8 @@ Some improvements may come later (automated tests, support for standard Windows 
  
 
 Current Windows build status :
-[![Build status](https://ci.appveyor.com/api/projects/status/y3v4ohtqkcysxcfg?svg=true)](https://ci.appveyor.com/project/olivierlevon/abcm2ps)
 
-[![Build status](https://ci.appveyor.com/api/projects/status/y3v4ohtqkcysxcfg/branch/master?svg=true)](https://ci.appveyor.com/project/olivierlevon/abcm2ps/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/y3v4ohtqkcysxcfg?svg=true)](https://ci.appveyor.com/project/olivierlevon/abcm2ps)
 
 
 ______________________________________________________________________________________________________________________
